@@ -1,9 +1,7 @@
 import React, { PropTypes } from 'react';
-import Header from 'components/Header';
 
 const App = (props) => (
 	<div className="app">
-		<Header />
 		{props.children}
 	</div>
 );

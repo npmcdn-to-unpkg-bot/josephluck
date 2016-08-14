@@ -1,15 +1,50 @@
 @appBackground: white;
 @bodyFontFamily: 'Yantramanav', sans-serif;
-@bodyFontSize: 20px;
+@bodyFontSize: 24px;
+@defaultFontColor: rgba(3, 26, 74, 1);
+@lightFontColor: desaturate(lighten(rgba(3, 26, 74, 1), 45%), 90%);
+@linkColor: desaturate(lighten(@defaultFontColor, 45%), 50%);
+@bodyBackgroundColor: rgba(244, 246, 248, 0.6);
+@lightBorderColor: darken(rgba(244, 246, 248, 1), 10%);
 
 html, body {
 	margin: 0px;
 	padding: 0px;
 	font-family: @bodyFontFamily;
 	font-size: @bodyFontSize;
-	line-height: 1.2em;
+	color: @defaultFontColor;
+	background: @bodyBackgroundColor;
+	min-height: 100%;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+ul, p {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
 }
 
 .app {
-	background: @appBackground;
+	height: 100%;
+	overflow: auto;
+}
+
+.f--light {
+	color: @lightFontColor;
+}
+
+.f--link {
+	color: @linkColor;
+}
+
+.b--light {
+	border-color: @lightBorderColor;
 }
