@@ -15,9 +15,7 @@ module.exports = {
     publicPath: '/build/'
   },
   resolve: {
-    root: [
-      path.join(__dirname, 'src')
-    ],
+    root: path.resolve('./src'),
     extensions: ['', '.js']
   },
   devtool: 'eval-source-map',
@@ -39,6 +37,14 @@ module.exports = {
         include: [
           path.join(__dirname, 'src')
         ]
+      },
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
+      },
+      {
+        test: /\.less$/,
+        loader: "style!css!autoprefixer!less"
       },
     ],
     preLoaders: [

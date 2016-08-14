@@ -1,9 +1,5 @@
-import React from 'react';
+import App from './App';
 
-const App = () => (
-	<div>
-		{'App'}
-	</div>
-);
+require('./App.less');
 
 export default App;
