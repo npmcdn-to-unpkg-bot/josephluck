@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^15.3.0",
+    "react-addons-css-transition-group": "^15.3.0",
     "react-css-modules": "^3.7.10",
     "react-dom": "^15.3.0",
     "react-router": "^2.6.1"

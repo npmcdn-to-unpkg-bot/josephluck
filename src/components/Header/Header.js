@@ -6,28 +6,34 @@ const Header = ({
 	style,
 }) => (
 	<div
-		className={`header pa3 bg-white bb b--light flex items-center ${className}`}
+		className={`
+			header pv3 ph4 bg-white bb b--light
+			flex items-center ${className}
+			full-page-transition-child child-1
+		`}
 		style={style}
 	>
 		<div
-			className="header-title f3 b"
+			className="header-title full-page-transition-child child-2 f3 b"
 			style={{
 				flex: 1,
 			}}
 		>
-			{'Joseph Luck'}
+			<Link to="/">
+				{'Joseph Luck'}
+			</Link>
 		</div>
 		<div className="header-links">
-			<a className="f--link">
+			<a className="full-page-transition-child child-3 f--link">
 				{'GitHub'}
 			</a>
 			<Link
 				to="/projects"
-				className="f--link mh2"
+				className="full-page-transition-child child-4 f--link mh3"
 			>
 				{'Projects'}
 			</Link>
-			<a className="f--link">
+			<a className="full-page-transition-child child-5 f--link">
 				{'Writing'}
 			</a>
 		</div>

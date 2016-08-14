@@ -1,0 +1,84 @@
+@pageTransitionDuration: 0.6s;
+@fullPageTransitionTransition: all @pageTransitionDuration ease-in-out;
+@fullPageTransitionChildTransition: all 400ms ease-in-out;
+
+.transition {
+
+}
+
+.full-page-transition {
+	a,
+	span {
+		display: inline-block;
+	}
+	.full-page-transition-child {
+		position: relative;
+		opacity: 1;
+		transition: @fullPageTransitionChildTransition;
+		transition-delay: 0s;
+		transform: translateY(0rem);
+		transition-delay: 0s;
+		&.child-1 {
+			transition-delay: 0.1s;
+		}
+		&.child-2 {
+			transition-delay: 0.2s;
+		}
+		&.child-3 {
+			transition-delay: 0.3s;
+		}
+		&.child-4 {
+			transition-delay: 0.4s;
+		}
+		&.child-5 {
+			transition-delay: 0.5s;
+		}
+		&.child-6 {
+			transition-delay: 0.6s;
+		}
+	}
+	.full-page-transition-enter {
+	  opacity: 0.01;
+	  transform: translateY(-1rem);
+	  transition: @fullPageTransitionTransition;
+	  position: absolute;
+	  width: 100%;
+	  .full-page-transition-child {
+	  	opacity: 0.01;
+	  	transform: translateY(-0.5rem);
+	  }
+	}
+	.full-page-transition-enter.full-page-transition-enter-active {
+	  opacity: 1;
+	  transform: translateY(0);
+	  transition: @fullPageTransitionTransition;
+	  position: absolute;
+	  width: 100%;
+	  .full-page-transition-child {
+	  	opacity: 1;
+	  	transform: translateY(0rem);
+	  }
+	}
+	.full-page-transition-leave {
+	  opacity: 1;
+	  transform: translateY(0);
+	  transition: @fullPageTransitionTransition;
+	  position: absolute;
+	  width: 100%;
+	  .full-page-transition-child {
+	  	opacity: 1;
+	  	transform: translateY(0rem);
+	  }
+	}
+	.full-page-transition-leave.full-page-transition-leave-active {
+	  opacity: 0.01;
+	  transform: translateY(1rem);
+	  transition: @fullPageTransitionTransition;
+	  position: absolute;
+	  width: 100%;
+	  .full-page-transition-child {
+	  	opacity: 0.01;
+	  	transform: translateY(0.5rem);
+	  }
+	}
+}
